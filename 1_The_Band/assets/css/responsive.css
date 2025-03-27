@@ -1,0 +1,68 @@
+/* RESPONSIVE */
+/*  
+    PC: >= 1024px
+    tablet: >= 740px < 1024px
+    mobile: < 740px
+*/
+/* CSS do rong toi da khi chay giao dien nay la 800: Tuong duong voi min-width */
+/* PC */
+@media (min-width: 1024px) {
+
+    #header .menu {
+        display: none;
+    }
+}
+
+/* tablet */
+@media (max-width: 1023px) and (min-width: 740px) {
+    
+    #header .menu {
+        display: none;
+    }
+}
+
+/* mobile */
+@media (max-width: 739px) {
+    #header {
+        overflow: hidden;
+    }
+    #header .seach_btn {
+        display: none;
+    }
+    #nav {
+        display: block;
+    }
+    #header .menu .menu_icon {
+        padding: 16px 24px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #nav > li {
+        display: block;
+    }
+    #nav > li > a {
+        display: block;
+        line-height: 16px;
+    }
+    #nav > li:first-child {
+        display: inline-block;
+        margin-top: -16px;
+    }
+    #nav > li:last-child {
+        margin-bottom: -16px ;
+    }
+
+    #nav .sub_class {
+        position: initial;
+    }
+    #content .member-item {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    .s-col-full {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}

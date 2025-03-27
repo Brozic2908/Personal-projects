@@ -1,0 +1,124 @@
+/* mobile, tablet */
+@media (max-width: 1224px) {
+    .hide_on_mobile_tablet {
+        display: none;
+    }
+    :root {
+        --header-height: 70px;
+        --navbar-height: 0px;
+    }
+    .header__cart-list {
+        position: fixed;
+        top: var(--header-height);
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+    .header__cart-list::before {
+        visibility: hidden;
+    }
+    .header__sort--bar {
+        display: flex;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1224px) {
+    .hide_on_tablet {
+        display: none;
+    }
+    .header__cart {
+        width: 120px;
+        text-align: right;
+    }
+    .category {
+        margin-top: 10px;
+    }
+
+}
+
+/* mobile */
+@media (max-width: 739px) {
+    .hide_on_mobile {
+        display: none;
+    }
+    .header--with-search {
+        justify-content: space-between;
+    }
+    .header__logo {
+        width: unset;
+        margin: 0 16px;
+    }
+    .header__cart {
+        width: unset;
+    }
+    .header__mobile-search {
+        margin: 0 16px;
+    }
+    .header__logo a {
+        line-height: 0;
+        display: block;
+    }
+    .header__search {
+        position: fixed;
+        padding: 4px 16px;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        height: 46px;
+        z-index: 1;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        display: none;
+    }
+    .header__search-history {
+        position: fixed;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+        left: 0;
+        width: 100%;
+    }
+    .nations {
+        padding: 40px 20px;
+        text-align: justify;
+    }
+    .footer__ending-text {
+        padding: 0 20px;
+    }
+    .container .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .header__cart {
+        margin: 4px 16px;
+    }
+    .padding {
+        padding-top: 10px;
+    }
+    .header__mobile-search {
+        display: block;
+    }
+    .mobile-category {
+        display: block;
+    }
+    .header__logo-img {
+        width: 110px;
+    }
+    .infomation__VIETNAM__borderBottom {
+        padding: 0 10px;
+    }
+    .footer {
+        padding: 0 10px;
+    }
+    .infomation__link, .infomation__name {
+        text-align: center;
+    }
+
+    @keyframes mobileSearchFadeIn {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to {
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
+}

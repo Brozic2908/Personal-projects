@@ -1,0 +1,199 @@
+:root {
+    /* value */
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --text-colorLight: #777;
+    --primary-color: rgb(255, 98, 49);
+    --primary-color-hover: rgba(255, 98, 49, 0.8);
+    --border-color: #dbdbdb;
+    --border-colorLight: rgb(233, 234, 235);
+    --mall-color: rgb(214, 0, 24);
+    --banner-sell-color: rgb(255, 216, 64);
+
+    /* format */
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
+}
+
+* {
+    /* phần tử sẽ kế thừa giá trị của thuộc tính box-sizing từ phần tử cha của nó. */
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* tỉ lệ 62.5% là một rem = 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Roboto", serif; 
+    /* Để các phần tử padding và border vẫn giữ nguyên độ rộng */
+    box-sizing: border-box;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-dir {
+    display: flex;
+    margin: 0 -5px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid__column-2 {
+    padding: 0 5px;
+    width: calc(100%/6);
+}
+
+.grid__column-2_in_10 {
+    position: relative;
+    padding: 0 5px;
+    width: calc(100%/5);
+}
+
+.grid__column-4 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    width: calc(100%/4);
+}
+
+.grid__column-10 {
+    padding: 0 5px;
+    width: calc(100%*10/12);
+    margin-bottom: 80px;
+}
+
+/* Animation */
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--grow-from));
+    } 
+    to {
+        transform: scale(--grow-to);
+    }
+}
+
+@keyframes FadeGrow {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+@keyframes FadeShrink {
+    from {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+    }
+}
+
+/* button style */
+.btn {
+    height: 36px;
+    min-width: 124px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    line-height: 1.6rem;
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn.btn--primary:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.btn.bth--size-s {
+    height: 32px;
+    font-size: 12px;
+}
+
+.margin__right {
+    margin-right: 8px;
+}
+
+.margin__LR {
+    margin: 0 28px;
+}
+
+.flex-center {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+a {
+    text-decoration: none;
+}
+
+.padding {
+    padding-top: 32px;
+    padding-bottom: 80px;
+}
+
+.price-options {
+    height: 36px;
+    min-width: 200px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+
+.rotate__180 {
+    transform: rotate(180deg);
+}
+
